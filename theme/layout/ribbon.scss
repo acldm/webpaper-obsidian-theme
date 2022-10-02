@@ -1,0 +1,11 @@
+.workspace-ribbon {
+    &.mod-left {
+        &.is-collapsed {
+            border-right: none;
+        }
+    }
+
+    .side-dock-settings {
+        margin-bottom: 0;
+    }
+}
