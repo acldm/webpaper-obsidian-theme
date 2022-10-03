@@ -1,0 +1,18 @@
+.workspace-tab-container-inner {
+    gap: 0.5em;
+}
+
+.workspace-tabs {
+    .workspace-tab-header {
+        &.is-active {
+            border-radius: 0;
+            background-color: var(--interactive-accent);
+            // color: var(--interactive-accent);
+        }
+
+        .workspace-tab-header-inner {
+            padding: 0.2em;
+        }
+    }
+    
+}

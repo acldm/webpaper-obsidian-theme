@@ -1,10 +1,4 @@
-.workspace-tabs {
-    .workspace-tab-header {
-        &.is-active {
-            color: var(--text-normal);
-        }
-    }
-}
+
 
 .workspace-leaf {
     &.mod-active {
@@ -13,26 +7,38 @@
 
     .workspace-leaf-content {
 
+        .nav-header {
+            padding: 0 1em;
+            z-index: 998;
+            // height: 1.25em;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .nav-buttons-container {
+                width: 100%;
+                justify-content: flex-start;
+                gap: 0.5em;
+                margin-bottom: 0.5em;
+            }
+        }
+
         &[data-type='file-explorer'] {
             .nav-header {
                 position: absolute;
                 right: 0.5em;
-            }
 
+                .nav-buttons-container {
+                    width: auto;
+                    margin-bottom: 0;
+                }
+            }
         }
 
-        .nav-header {
-            padding: 0;
-            z-index: 998;
-            height: 1.25em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
+        &[data-type='search'] {
             .nav-buttons-container {
-                gap: 0.75em;
+                gap: 0;
             }
-
         }
 
         .nav-files-container {
@@ -42,7 +48,12 @@
 
                 &:first-child {
                     border-left: none;
+
                     &>.nav-folder-title {
+                        position: sticky;
+                        z-index: 9;
+                        top: 0;
+                        background-color: var(--background-secondary);
                         margin-bottom: 0.25em;
 
                         &>.nav-folder-title-content {
@@ -54,9 +65,8 @@
                 }
 
                 &.mod-root {
-                    & > .nav-folder {
+                    &>.nav-folder {}
 
-                    }
                     &>.nav-folder-children {
                         position: relative;
                     }
@@ -93,6 +103,7 @@
                             border-right: 0;
                             border-bottom: 0;
                             background-color: transparent;
+
                             &::before {
                                 display: block;
                                 content: " ";
@@ -118,6 +129,18 @@
                             }
                         }
                     }
+                }
+            }
+        }
+
+        .search-result-file-matches {
+            border-bottom: 0;
+            .search-result-file-match {
+                background-color: white;
+                border: none;
+    
+                &::after {
+                    display: none;
                 }
             }
         }
