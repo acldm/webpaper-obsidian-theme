@@ -1,3 +1,10 @@
+.titlebar {
+    background-color: var(--background-primary);
+    .titlebar-text {
+        color: black;
+    }
+}
+
 .status-bar {
     border-top: none;
     background-color: transparent;

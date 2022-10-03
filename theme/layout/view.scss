@@ -1,0 +1,26 @@
+.workspace-leaf {
+    &.mod-active {
+        .view-header {
+            border-color: white;
+        }
+    }
+
+    .view-header {
+        background-color: white;
+        height: auto;
+        padding: 0.5em;
+
+        .view-header-icon {
+            display: none;
+        }
+    }
+
+    .view-header-title-container {
+        &:after {
+            display: none;
+        }
+        .view-header-title {
+            font-size: var(--h1);
+        }
+    }
+}
