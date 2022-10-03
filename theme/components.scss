@@ -3,10 +3,22 @@
     padding: 0;
     display: inline-flex;
     align-items: center;
+    padding: 0.25em;
+    border-radius: 0;
+    
+    &.is-active {
+    }
+
     svg {
         width: 1em;
         height: 1em;
     }
+}
+
+.search-input-container {
+ & > input {
+    border-radius: 0;
+ }
 }
 
 .workspace-tab-header {
